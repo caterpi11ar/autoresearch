@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Manrope } from "next/font/google"
+import { Manrope, Instrument_Sans } from "next/font/google"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
@@ -16,15 +16,15 @@ const calSans = localFont({
   display: "swap",
 })
 
-const instrumentSans = localFont({
-  src: "./fonts/InstrumentSans-Variable.woff2",
+const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
   variable: "--font-instrument-sans",
   display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: "Apex - Enterprise SaaS Platform",
-  description: "The modern platform for teams who ship fast. Built for scale, designed for speed.",
+  title: "AutoResearch - 一站式自动科研平台",
+  description: "搜索论文、刷论文、收藏论文、连接代码仓库、智能写作 —— 你的一站式科研助手",
     generator: 'v0.app'
 }
 
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="zh-CN" className="dark">
       <body className={`${manrope.variable} ${calSans.variable} ${instrumentSans.variable} font-sans antialiased`}>
         <div className="noise-overlay" aria-hidden="true" />
         {children}

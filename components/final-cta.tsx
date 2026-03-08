@@ -22,10 +22,10 @@ export function FinalCTA() {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
           style={{ fontFamily: "var(--font-cal-sans)" }}
         >
-          Ready to ship faster?
+          准备好提升你的科研效率了吗？
         </h2>
         <p className="text-lg sm:text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">
-          Join thousands of teams already building with Apex. Start free, no credit card required.
+          加入数千名正在使用 AutoResearch 的科研人员。免费开始，无需信用卡。
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -33,7 +33,7 @@ export function FinalCTA() {
             size="lg"
             className="shimmer-btn bg-white text-zinc-950 hover:bg-zinc-200 rounded-full px-8 h-14 text-base font-medium shadow-lg shadow-white/20"
           >
-            Get Started for Free
+            免费开始使用
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
           <Button
@@ -41,11 +41,11 @@ export function FinalCTA() {
             size="lg"
             className="rounded-full px-8 h-14 text-base font-medium border-zinc-800 text-zinc-300 hover:bg-zinc-900 hover:text-white hover:border-zinc-700 bg-transparent"
           >
-            Talk to Sales
+            联系我们
           </Button>
         </div>
 
-        <p className="mt-8 text-sm text-zinc-500">Free forever for individuals. Team plans start at $29/month.</p>
+        <p className="mt-8 text-sm text-zinc-500">个人永久免费。团队版低至 $29/月。</p>
       </motion.div>
     </section>
   )

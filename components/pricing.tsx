@@ -7,43 +7,43 @@ import { Button } from "@/components/ui/button"
 
 const plans = [
   {
-    name: "Starter",
-    description: "Perfect for side projects and small teams",
+    name: "免费版",
+    description: "个人科研者的最佳起点",
     price: { monthly: 0, yearly: 0 },
-    features: ["3 team members", "10 projects", "Basic analytics", "Community support", "1GB storage"],
-    cta: "Get Started",
+    features: ["每月 100 次搜索", "基础推荐", "200 篇收藏", "社区支持", "基础 AI 写作"],
+    cta: "免费开始",
     highlighted: false,
   },
   {
-    name: "Pro",
-    description: "For growing teams that need more power",
+    name: "专业版",
+    description: "为需要更强大功能的科研人员打造",
     price: { monthly: 29, yearly: 24 },
     features: [
-      "Unlimited team members",
-      "Unlimited projects",
-      "Advanced analytics",
-      "Priority support",
-      "100GB storage",
-      "Custom domains",
-      "API access",
+      "无限搜索",
+      "高级推荐算法",
+      "无限收藏",
+      "代码仓库关联",
+      "无限 AI 写作",
+      "优先支持",
+      "导出引用",
     ],
-    cta: "Start Free Trial",
+    cta: "开始免费试用",
     highlighted: true,
   },
   {
-    name: "Enterprise",
-    description: "For organizations with advanced needs",
+    name: "团队版",
+    description: "适合科研团队和实验室",
     price: { monthly: 99, yearly: 79 },
     features: [
-      "Everything in Pro",
-      "SSO & SAML",
-      "Dedicated support",
-      "SLA guarantee",
-      "Unlimited storage",
-      "Custom integrations",
-      "Audit logs",
+      "全部专业版功能",
+      "团队共享文献库",
+      "协作写作",
+      "数据仪表盘",
+      "无限存储",
+      "专属客户经理",
+      "API 访问",
     ],
-    cta: "Contact Sales",
+    cta: "联系我们",
     highlighted: false,
   },
 ]
@@ -79,10 +79,10 @@ export function Pricing() {
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "var(--font-instrument-sans)" }}
           >
-            Simple, transparent pricing
+            简单透明的价格
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto mb-8">
-            Start free, scale as you grow. No hidden fees, no surprises.
+            个人免费，按需升级。没有隐藏费用，没有套路。
           </p>
 
           {/* Billing Toggle */}
@@ -100,7 +100,7 @@ export function Pricing() {
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 />
               )}
-              <span className="relative z-10">Monthly</span>
+              <span className="relative z-10">月付</span>
             </button>
             <button
               onClick={() => setBillingCycle("yearly")}
@@ -115,9 +115,9 @@ export function Pricing() {
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 />
               )}
-              <span className="relative z-10">Yearly</span>
+              <span className="relative z-10">年付</span>
               <span className="relative z-10 ml-2 px-2 py-0.5 text-xs bg-emerald-500/20 text-emerald-400 rounded-full">
-                -20%
+                省20%
               </span>
             </button>
           </div>
@@ -146,7 +146,7 @@ export function Pricing() {
 
               {plan.highlighted && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-white text-zinc-950 text-xs font-medium rounded-full">
-                  Most Popular
+                  最受欢迎
                 </div>
               )}
 
@@ -158,10 +158,10 @@ export function Pricing() {
               <div className="mb-6">
                 <div className="flex items-baseline gap-1">
                   <span className="text-4xl font-bold text-white">${plan.price[billingCycle]}</span>
-                  {plan.price.monthly > 0 && <span className="text-zinc-400 text-sm">/month</span>}
+                  {plan.price.monthly > 0 && <span className="text-zinc-400 text-sm">/月</span>}
                 </div>
                 {billingCycle === "yearly" && plan.price.yearly > 0 && (
-                  <p className="text-xs text-zinc-500 mt-1">Billed annually (${plan.price.yearly * 12}/year)</p>
+                  <p className="text-xs text-zinc-500 mt-1">按年计费 (${plan.price.yearly * 12}/年)</p>
                 )}
               </div>
 
